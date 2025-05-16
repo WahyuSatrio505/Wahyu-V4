@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0f0f1e;
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+  cursor: none;
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s;
+  z-index: 9999;
+}
+
+.cursor.grow {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  mix-blend-mode: difference;
+}
+
+.learning-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  cursor: pointer;
+}
+
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card[data-skill="game"] {
+  background: linear-gradient(145deg, rgba(255, 107, 107, 0.05), rgba(255, 107, 107, 0.1));
+}
+
+.skill-card[data-skill="php"] {
+  background: linear-gradient(145deg, rgba(130, 88, 255, 0.05), rgba(130, 88, 255, 0.1));
+}
+
+.skill-card[data-skill="java"] {
+  background: linear-gradient(145deg, rgba(255, 180, 78, 0.05), rgba(255, 180, 78, 0.1));
+}
+
+.skill-card[data-skill="python"] {
+  background: linear-gradient(145deg, rgba(46, 213, 115, 0.05), rgba(46, 213, 115, 0.1));
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.skill-card[data-skill="game"] .skill-icon {
+  color: #ff6b6b;
+}
+
+.skill-card[data-skill="php"] .skill-icon {
+  color: #8258ff;
+}
+
+.skill-card[data-skill="java"] .skill-icon {
+  color: #ffb44e;
+}
+
+.skill-card[data-skill="python"] .skill-icon {
+  color: #2ed573;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-card p {
+  color: #a0a0a0;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-details {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.skill-details.active {
+  height: auto;
+}
+
+.skill-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skill-details ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+  color: #d0d0d0;
+}
+
+.skill-details ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #4facfe;
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Cyberpunk Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- End GSAP -->
+    <!-- Tambahkan ini di bagian head atau sebelum tag penutup body -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- End animasi -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./sertif.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./BElajarSection.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Cyberpunk grid background -->
+    <div class="grid-background">
+      <div class="grid-vertical"></div>
+      <div class="grid-horizontal"></div>
+    </div>
+    <!-- ahkir grid -->
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">Wahyu <span> V4</span></div>
+        <!-- End header -->
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- dektop ahkir -->
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- Ahkir Mobile -->
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#learning">Learning</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- End Nav -->
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+      <div class="container">
+        <div class="home-content">
+          <div class="home-text">
+            <div class="welcome-badge">Fans Ronaldo Garis Keras 🤩😏</div>
+            <h1>Hai, Nama Saya <span class="gradient-text">Wahyu</span></h1>
+            <p>Saya Adalah Pengembang Dari Sebuah Website, dan Tertarik sekali dalam dunia Front-End, Back-End, Game Developer, maupun juga AI Developer😎🚀</p>
+            <div class="home-buttons">
+              <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+              <a href="#projects" class="btn btn-secondary">Ingin Melihat Projectku?</a>
+            </div>
+          </div>
+          <div class="home-image">
+            <div class="profile-image-container">
+              <div class="profile-image-bg"></div>
+              <div class="profile-image-inner">
+                <img src="./img/animw.jpg" alt="Profile" />
+              </div>
+              <div class="glow-effect glow-1"></div>
+              <div class="glow-effect glow-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Ahkir Home -->
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-header">
+          <div class="glitch-title-container">
+            <h2 class="about-title" data-text="About Me">About Me</h2>
+          </div>
+          <div class="about-subtitle"><span class="typed-text"></span><span class="cursor">&nbsp;</span></div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-image-container">
+            <div class="about-image-wrapper">
+              <img src="./img/ProfileKe2.png" alt="About Me" class="about-image" />
+              <div class="image-glitch-effect"></div>
+            </div>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+            </div>
+          </div>
+
+          <div class="about-text-container">
+            <div class="about-text-wrapper">
+              <h3 class="about-heading">Siapa Saya?</h3>
+              <p class="about-paragraph">Saya Adalah Mahasiswa Aktif, Teknik Informatika dan saat ini saya lagi di semester 2🪶</p>
+
+              <h3 class="about-heading">Pengalaman Dan Petualanganku</h3>
+              <p class="about-paragraph">Pertama kali aku tertarik Mempelajari dalam dunia Front-End Sejak Smk Kelas 3, dan sekarang aku sedang Mempelajari Back-End, dan juga aku berkeingginan menjadi AI Developer😎🚀</p>
+
+              <div class="personal-info">
+                <div class="info-item">
+                  <span class="info-label">Nama:</span>
+                  <span class="info-value">Wahyu Satrio W</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Email:</span>
+                  <span class="info-value">wahyuuusatriow@gmail.com</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Lokasi:</span>
+                  <span class="info-value">Solo, INDONESIA</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Tersedia:</span>
+                  <span class="info-value">Freelance & Penuh Waktu</span>
+                </div>
+              </div>
+
+              <div class="experience-bars">
+                <div class="experience-item">
+                  <div class="experience-info">
+                    <span>Front-End Dev</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" data-width="90%"></div>
+                  </div>
+                </div>
+                <div class="experience-item">
+                  <div class="experience-info">
+                    <span>UI/UX Design</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" data-width="85%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="about-cta">
+                <a href="./cv/CV wahyu satrio.pdf" class="btn primary-btn download-cv">
+                  <span>Download CV</span>
+                  <svg xmlns="#" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end -->
+
+    <!-- Skills Section (Updated with images and buttons) -->
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title2" data-text="My Skills">My Skills</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-intro">
+          <p>Saya memiliki berbagai keterampilan dalam pengembangan Web Maupun juga Desain👾</p>
+          <p>Saya juga menggunakan beberapa tools yang Digunakan🪶</p>
+        </div>
+
+        <div class="skills-container">
+          <!-- Frontend Skills -->
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Frontend Development</h3>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item" data-percentage="88">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                  </div>
+                  <div class="skill-percentage">88%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill html"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="91">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                  </div>
+                  <div class="skill-percentage">91%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill css"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="21">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                  </div>
+                  <div class="skill-percentage">21%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill js"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="17">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="skill-percentage">17%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill react"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Backend Development</h3>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item" data-percentage="17">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                  </div>
+                  <div class="skill-percentage">15%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill node"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="27">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                  </div>
+                  <div class="skill-percentage">27%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill php"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="23">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                  </div>
+                  <div class="skill-percentage">23%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill mysql"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="21">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                  </div>
+                  <div class="skill-percentage">21%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill python"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Design Skills -->
+          <div class="skills-category">
+            <div class="category-header">
+              <div class="category-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Design & Tools</h3>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item" data-percentage="85">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-figma"></i>
+                    <span>Figma</span>
+                  </div>
+                  <div class="skill-percentage">85%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill figma"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="68">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-adobe"></i>
+                    <span>Adobe DX</span>
+                  </div>
+                  <div class="skill-percentage">68%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill xd"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="27">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                  </div>
+                  <div class="skill-percentage">27%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill git"></div>
+                </div>
+              </div>
+
+              <div class="skill-item" data-percentage="88">
+                <div class="skill-info">
+                  <div class="skill-name">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
+                  </div>
+                  <div class="skill-percentage">88%</div>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill responsive"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Radar Chart -->
+        <div class="skills-radar">
+          <h3>Skill Overview</h3>
+          <div class="radar-container">
+            <canvas id="skillRadar"></canvas>
+          </div>
+        </div>
+
+        <!-- Skill Cards -->
+        <div class="skills-cards">
+          <div class="skill-card" data-skill="Web Development">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h4>Web Development</h4>
+            <p>Membuat website responsif dengan fokus pada performa dan pengalaman pengguna.</p>
+          </div>
+
+          <div class="skill-card" data-skill="UI/UX Design">
+            <div class="card-icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h4>UI/UX Design</h4>
+            <p>Merancang antarmuka yang intuitif dan pengalaman pengguna yang menarik.</p>
+          </div>
+
+          <div class="skill-card" data-skill="Mobile Development">
+            <div class="card-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Mobile Development</h4>
+            <p>Mengembangkan aplikasi mobile yang responsif dan user-friendly.</p>
+          </div>
+
+          <div class="skill-card" data-skill="Database Management">
+            <div class="card-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h4>Database Management</h4>
+            <p>Mengelola dan mengoptimalkan database untuk performa terbaik.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Skills -->
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="cert-title" class="section-title glitch-title" data-text="My Certifications">My Certifications</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="certificates-content">
+          <div id="cert-cards" class="certificates-grid">
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+              <div class="certificate-glow"></div>
+              <div class="certificate-image">
+                <img src="./img/SERTIF1.JPG" alt="Web Development Certificate" class="certificate-img" />
+                <div class="certificate-overlay">
+                  <a href="./cv/sertifwahyu.pdf" class="view-certificate">
+                    <span>View Certificate</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h4>Pemrograman Dengan Java</h4>
+                <div class="certificate-meta">
+                  <p class="certificate-issuer">
+                    <span class="issuer-icon"></span>
+                    Dicoding
+                  </p>
+                  <p class="certificate-date">
+                    <span class="date-icon"></span>
+                    April 2025
+                  </p>
+                </div>
+                <div class="certificate-badge">VERIFIED</div>
+              </div>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+              <div class="certificate-glow"></div>
+              <div class="certificate-image">
+                <img src="./img/SERTIF2.JPG" alt="JavaScript Certificate" class="certificate-img" />
+                <div class="certificate-overlay">
+                  <a href="./cv/Sertiv-AI.pdf" class="view-certificate">
+                    <span>View Certificate</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h4>Belajar Dasar AI</h4>
+                <div class="certificate-meta">
+                  <p class="certificate-issuer">
+                    <span class="issuer-icon"></span>
+                    Dicoding
+                  </p>
+                  <p class="certificate-date">
+                    <span class="date-icon"></span>
+                    April 2025
+                  </p>
+                </div>
+                <div class="certificate-badge">VERIFIED</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End sertif -->
+
+    <!-- Projects Section (Updated with clearer buttons) -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>My <span class="gradient-text">Projects</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./img/PJ8.png" alt="Cyberpunk Dashboard" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Portofolio Website</span>
+              <span class="project-status">Selesai</span>
+              <h3>Cyberpunk Porto V2</h3>
+              <p>Portofolio V2 Yang Sudah Saya Kembangkan Dengan Menggunakan Teknologi React Native dan Optimalisasi Dengan Baik</p>
+              <div class="project-buttons">
+                <a href="https://portofolio-v2-lime.vercel.app/" class="btn btn-primary btn-sm">View Project</a>
+                <a href="https://github.com/WahyuSatrio505/Portofolio-V2" class="btn btn-secondary btn-sm">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./img/PJ6.png" alt="E-Commerce Platform" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Harmony Coffe</span>
+              <span class="project-status">Selesai</span>
+              <h3>Website Coffe Platform</h3>
+              <p>Memperkalkan Sebuah Landing Page Harmony Coffee</p>
+              <div class="project-buttons">
+                <a href="https://harmony-coffee-github-io.vercel.app/" class="btn btn-primary btn-sm">View Project</a>
+                <a href="https://github.com/WahyuSatrio505/HarmonyCoffee.github.io" class="btn btn-secondary btn-sm">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./img/PJ1.png" alt="Portfolio Template" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Web Portofolio V1</span>
+              <span class="project-status">Selesai</span>
+              <h3>Portfolio V1</h3>
+              <p>Web Paling Pertama yang saya buat, jadi yaaa....</p>
+              <div class="project-buttons">
+                <a href="https://wahyusatrio505.github.io/portofolioWahyuWebsite/" class="btn btn-primary btn-sm">View Project</a>
+                <a href="https://github.com/WahyuSatrio505/portofolioWahyuWebsite" class="btn btn-secondary btn-sm">Source Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./img/Iklan1.png" alt="Task Management App" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">E-Commerce-W</span>
+              <span class="project-status2">Dalam Tahap</span>
+              <h3>.</h3>
+              <p>-</p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="img/Iklan2.png" alt="Social Media Platform" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">-Gym-</span>
+              <span class="project-status2">Dalam Tahap</span>
+              <h3>-</h3>
+              <p>-</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./img/LandingPage.png" alt="Social Media Platform" />
+            </div>
+            <div class="project-content">
+              <span class="project-category">Login User</span>
+              <span class="project-status2">Maintenance</span>
+              <h3>-</h3>
+              <p>-</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section">
+      <div class="container">
+        <h1 class="section-title3">My Learning Journey</h1>
+        <p class="section-subtitle">Jelajahi teknologi yang saat ini saya pelajari</p>
+
+        <div class="skills-container">
+          <div class="skill-card" data-skill="game">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 6H7C4.79086 6 3 7.79086 3 10V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16V10C21 7.79086 19.2091 6 17 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 12H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 10V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M17 10.5V10.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19 13V13.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Game Development</h3>
+            <p>Creating interactive experiences and virtual worlds</p>
+            <div class="skill-details">
+              <ul>
+                <li>Unity Engine</li>
+                <li>3D Modeling</li>
+                <li>Game Physics</li>
+                <li>Level Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="php">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>PHP</h3>
+            <p>Server-side scripting for dynamic web applications</p>
+            <div class="skill-details">
+              <ul>
+                <li>Laravel Framework</li>
+                <li>Database Integration</li>
+                <li>API Development</li>
+                <li>Web Security</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="java">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.35C15.11 18.56 15.08 18.78 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3>Java</h3>
+            <p>Object-oriented programming for enterprise applications</p>
+            <div class="skill-details">
+              <ul>
+                <li>Spring Framework</li>
+                <li>Android Development</li>
+                <li>Multithreading</li>
+                <li>Enterprise Solutions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skill-card" data-skill="python">
+            <div class="skill-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8V5L19 2L20 5L18 7H16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 2C8.68629 2 6 4.68629 6 8V16C6 19.3137 8.68629 22 12 22C15.3137 22 18 19.3137 18 16V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 22V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 19H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Python</h3>
+            <p>Versatile language for data science and automation</p>
+            <div class="skill-details">
+              <ul>
+                <li>Data Analysis</li>
+                <li>Machine Learning</li>
+                <li>Web Scraping</li>
+                <li>Automation Scripts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="particles-container">
+          <div class="particles"></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Belajar -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact <span class="gradient-text">Me</span></h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Hubungi Saya</h3>
+            <p>Apakah Anda memiliki proyek dalam pikiran atau ingin berkolaborasi? Jangan ragu untuk menghubungi saya melalui formulir kontak atau melalui profil media sosial saya di bawah ini⛱️😎</p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                  <span>Email</span>
+                  <p>wahyuuusatriow@gmail.com.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                  <span>Phone</span>
+                  <p>+62 882 1472 8116</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-text">
+                  <span>Location</span>
+                  <p>Solo, Indonesia</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <h4>Connect With Me</h4>
+              <div class="social-icons">
+                <a href="https://github.com/WahyuSatrio505" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/whyeyyz" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/wahyu-satrio-b76795317/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/whyuueyzz/" class="social-icon"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="John Doe" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" placeholder="john@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Project Inquiry" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo"><span>.</span></div>
+          <div class="copyright">© <span id="currentYear"></span> Wahyu S. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Js -->
+    <script src="./JS/KINGJS.js"></script>
+    <script src="./JS/GSAPSKILLS.js"></script>
+    <script src="./JS/AboutGSAP.js"></script>
+    <script src="./JS/sertifikatGSAP.js"></script>
+    <script src="./JS//BelajarS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- End JS -->
+  </body>
+</html>
