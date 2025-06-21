@@ -32,4 +32,4 @@ Website ini dibangun sebagai bagian dari latihan dan portofolio pribadi saya, se
 
 
 
-*SEKIAN PENGENALAN DAN ISI DARI REPOSITORY SAYA, Thanksss*
+SEKIAN PENGENALAN DAN ISI DARI REPOSITORY SAYA, Thanksss
