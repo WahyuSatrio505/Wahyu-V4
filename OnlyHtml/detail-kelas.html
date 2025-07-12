@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYM Olahraga - Kelas Fitness</title>
+    <link rel="stylesheet" href="../asset/detail-kelas.css" />
+
+    <!-- pemisah -->
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <span class="dumbbell">🏋️</span>
+          <h1>GYM Olahraga</h1>
+        </div>
+        <div class="auth-buttons">
+          <button class="btn-login">Login</button>
+          <button class="btn-register">Daftar</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <section class="classes-section">
+          <h2 class="section-title">Kelas Fitness Tersedia</h2>
+          <div class="classes-grid">
+            <!-- Strength Training Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="/placeholder.svg?height=200&width=350" alt="Strength Training" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Strength Training</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Budi Santoso</p>
+                  <p class="duration">60 menit</p>
+                </div>
+                <p class="class-description">Kelas latihan kekuatan untuk membangun otot dan meningkatkan kekuatan fisik. Cocok untuk semua level, dari pemula hingga tingkat lanjut.</p>
+                <div class="class-footer">
+                  <span class="level-badge">Level: Semua Level</span>
+                  <button class="btn-detail" onclick="goToDetail('strength-training')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cardio Blast Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="/placeholder.svg?height=200&width=350" alt="Cardio Blast" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Cardio Blast</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Siti Rahayu</p>
+                  <p class="duration">45 menit</p>
+                </div>
+                <p class="class-description">Kelas kardio intensif untuk membakar kalori dan meningkatkan stamina. Kombinasi gerakan aerobik, HIIT, dan latihan interval.</p>
+                <div class="class-footer">
+                  <span class="level-badge intermediate">Level: Menengah</span>
+                  <button class="btn-detail" onclick="goToDetail('cardio-blast')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yoga Flow Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="/placeholder.svg?height=200&width=350" alt="Yoga Flow" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Yoga Flow</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Dewi Putri</p>
+                  <p class="duration">75 menit</p>
+                </div>
+                <p class="class-description">Kelas yoga untuk meningkatkan fleksibilitas, keseimbangan, dan ketenangan pikiran. Fokus pada pernapasan dan gerakan yang mengalir.</p>
+                <div class="class-footer">
+                  <span class="level-badge">Level: Semua Level</span>
+                  <button class="btn-detail" onclick="goToDetail('yoga-flow')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modalBody">
+          <!-- Detail content will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <script src="../OnlyJS/detail-kelas.js"></script>
+  </body>
+</html>

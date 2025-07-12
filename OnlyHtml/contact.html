@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak Kami - GYM Olahraga</title>
+    <link rel="stylesheet" href="../asset/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Hubungi GYM Olahraga untuk informasi lebih lanjut" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="index.html" class="logo">
+            <i class="fas fa-dumbbell"></i>
+            <span>GYM Olahraga</span>
+          </a>
+
+          <div class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="kelas.html" class="nav-link">Kelas</a></li>
+              <li><a href="jadwal.html" class="nav-link">Jadwal</a></li>
+              <li><a href="../OnlyHtml/pembayaran-gate.html" class="nav-link">Pembayaran</a></li>
+              <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-buttons">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="login.html?register=true" class="btn btn-primary">Daftar</a>
+          </div>
+
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <div class="container">
+        <h1>Hubungi Kami</h1>
+        <p>Punya pertanyaan atau ingin informasi lebih lanjut? Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda.</p>
+      </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card animate-on-scroll">
+              <h3>Informasi Kontak</h3>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Alamat</h4>
+                  <p>Susukan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Telepon</h4>
+                  <p>+62 882 1472 8116</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>ApexGymOfficial@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <ul>
+                    <li>Senin - Jumat: 06:00 - 22:00</li>
+                    <li>Sabtu: 07:00 - 20:00</li>
+                    <li>Minggu: 08:00 - 18:00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container animate-on-scroll">
+            <div class="contact-card">
+              <h3>Kirim Pesan</h3>
+              <form id="contactForm" action="php/contact.php" method="post">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="subject">Subjek</label>
+                    <input type="text" id="subject" name="subject" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Pesan</label>
+                  <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-dumbbell"></i>
+              <span>GYM Olahraga</span>
+            </div>
+            <p>Tempat terbaik untuk membangun tubuh ideal dan gaya hidup sehat Anda.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Link Cepat</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="kelas.html">Kelas</a></li>
+              <li><a href="jadwal.html">Jadwal</a></li>
+              <li><a href="../OnlyHtml/pembayaran-gate.html" class="nav-link">Pembayaran</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-hours">
+            <h3>Jam Operasional</h3>
+            <ul>
+              <li>Senin - Jumat: 06:00 - 22:00</li>
+              <li>Sabtu: 07:00 - 20:00</li>
+              <li>Minggu: 08:00 - 18:00</li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Kontak Kami</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> Susukan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</li>
+              <li><i class="fas fa-phone"></i> +62 882 1472 8116</li>
+              <li><i class="fas fa-envelope"> ApexGymOfficial</i></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> GYM Olahraga APEX. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Css -->
+    <script src="./"></script>
+    <!-- Css -->
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="../OnlyJS/Hamburger-menu.js"></script>
+    <!-- End JS -->
+  </body>
+</html>
