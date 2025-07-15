@@ -4,53 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GYM Olahraga - Kelas Fitness</title>
-    <link rel="stylesheet" href="/asset/detail-kelas.css" />
-    <link rel="stylesheet" href="/asset/all.css" />
-    <link rel="stylesheet" href="/asset/membership.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-
-          <h1>APEX OFFICIAL</h1>
-        </div>
-        <nav class="navigation">
-        </nav>
-        <div class="auth-buttons">
-          <button class="btn-login">Login</button>
-          <button class="btn-register">Daftar</button>
-        </div>
-      </div>
-    </header>
-
-
-    <!-- navbar -->
+    <link rel="stylesheet" href="./asset/Pembayaran.css" />
+    <link rel="stylesheet" href="./asset/all.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Midtrans Snap Script -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-YOUR_CLIENT_KEY"></script>
+  </head>
+  <body>
     <nav class="navbar">
       <div class="container">
         <div class="navbar-content">
-          <a href="" class="logo">
+          <a href="index.html" class="logo">
             <i class="fas fa-dumbbell"></i>
             <span>APEX PERFORMANCE</span>
-                      <a href="index.html" class="back-button">
-        <i class="fa-solid fa-house-user"></i>
           </a>
+
+          <div class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li><a href="kelas.html" class="nav-link">Kelas</a></li>
+              <li><a href="jadwal.html" class="nav-link">Jadwal</a></li>
+              <li><a href="./pembayaran-gate.html" class="nav-link">Pembayaran</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-buttons">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="login.html?register=true" class="btn btn-primary">Daftar</a>
+          </div>
+
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
         </div>
       </div>
     </nav>
 
+    <!-- Home Page -->
+    <main id="homePage" class="page-content active">
+      <div class="container">
+        <section class="hero-section">
+          <div class="hero-content">
+            <button class="btn-cta" onclick="showPage('membership')">Lihat Paket Membership</button>
+          </div>
+        </section>
 
+        <section class="classes-section">
+          <h2 class="section-title">Kelas Fitness Tersedia</h2>
+          <div class="classes-grid">
+            <!-- Strength Training Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="./IMG-KELAS/strenght.jpg" alt="Strength Training" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Strength Training</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Budi Santoso</p>
+                  <p class="duration">60 menit</p>
+                </div>
+                <p class="class-description">Kelas latihan kekuatan untuk membangun otot dan meningkatkan kekuatan fisik. Cocok untuk semua level, dari pemula hingga tingkat lanjut.</p>
+                <div class="class-footer">
+                  <span class="level-badge">Level: Semua Level</span>
+                  <button class="btn-detail" onclick="goToDetail('strength-training')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
 
-    
+            <!-- Cardio Blast Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="./IMG-KELAS/Cardio.webp" alt="Cardio Blast" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Cardio Blast</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Siti Rahayu</p>
+                  <p class="duration">45 menit</p>
+                </div>
+                <p class="class-description">Kelas kardio intensif untuk membakar kalori dan meningkatkan stamina. Kombinasi gerakan aerobik, HIIT, dan latihan interval.</p>
+                <div class="class-footer">
+                  <span class="level-badge intermediate">Level: Menengah</span>
+                  <button class="btn-detail" onclick="goToDetail('cardio-blast')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Yoga Flow Card -->
+            <div class="class-card">
+              <div class="class-image">
+                <img src="./IMG-KELAS/yoga-flow.jpg" alt="Yoga Flow" />
+              </div>
+              <div class="class-content">
+                <h3 class="class-title">Yoga Flow</h3>
+                <div class="class-info">
+                  <p class="instructor">Instruktur: Dewi Putri</p>
+                  <p class="duration">75 menit</p>
+                </div>
+                <p class="class-description">Kelas yoga untuk meningkatkan fleksibilitas, keseimbangan, dan ketenangan pikiran. Fokus pada pernapasan dan gerakan yang mengalir.</p>
+                <div class="class-footer">
+                  <span class="level-badge">Level: Semua Level</span>
+                  <button class="btn-detail" onclick="goToDetail('yoga-flow')">Detail Kelas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
     <!-- Membership Page -->
     <main id="membershipPage" class="page-content">
       <div class="container">
         <section class="membership-hero">
           <h1 class="page-title">Paket Membership</h1>
           <p class="page-subtitle">Pilih paket yang sesuai dengan kebutuhan fitness Anda</p>
+          <div class="payment-info">
+            <div class="payment-methods">
+              <span class="payment-label">Metode Pembayaran Tersedia :</span>
+              <img src="./icons/paypal.svg" alt="PayPal" class="payment-icon" />
+              <img src="./icons/payhip.svg" alt="payship" class="payment-icon" />
+              <img src="./icons/applepay.svg" alt="applepay" class="payment-icon" />
+              <img src="./icons/visa-svgrepo-com.svg" alt="visa" class="payment-icon" />
+              <img src="./icons/bri-mobile-svgrepo-com.svg" alt="bri" class="payment-icon" />
+              <img src="./icons/dana-svgrepo-com.svg" alt="dana" class="payment-icon" />
+
+              <span class="secure-badge">🔒 Pembayaran Aman dengan Midtrans</span>
+            </div>
+          </div>
         </section>
 
         <section class="pricing-section">
@@ -213,130 +296,26 @@
       </div>
     </main>
 
-
-
-    <!-- pemisah -->
-  </head>
-  <body>
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- Payment Status Page -->
+    <main id="payment-statusPage" class="page-content">
       <div class="container">
-        <section class="classes-section">
-          <h2 class="section-title">Kelas Fitness Tersedia</h2>
-          <div class="classes-grid">
-            <!-- Strength Training Card -->
-            <div class="class-card">
-              <div class="class-image">
-                <img src="/IMG-KELAS/strenght.jpg" alt="Strength Training" />
-              </div>
-              <div class="class-content">
-                <h3 class="class-title">Strength Training</h3>
-                <div class="class-info">
-                  <p class="instructor">Instruktur: Budi Santoso</p>
-                  <p class="duration">60 menit</p>
-                </div>
-                <p class="class-description">Kelas latihan kekuatan untuk membangun otot dan meningkatkan kekuatan fisik. Cocok untuk semua level, dari pemula hingga tingkat lanjut.</p>
-                <div class="class-footer">
-                  <span class="level-badge">Level: Semua Level</span>
-                  <button class="btn-detail" onclick="goToDetail('strength-training')">Detail Kelas</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cardio Blast Card -->
-            <div class="class-card">
-              <div class="class-image">
-                <img src="/IMG-KELAS/Cardio.webp" alt="Cardio Blast" />
-              </div>
-              <div class="class-content">
-                <h3 class="class-title">Cardio Blast</h3>
-                <div class="class-info">
-                  <p class="instructor">Instruktur: Siti Rahayu</p>
-                  <p class="duration">45 menit</p>
-                </div>
-                <p class="class-description">Kelas kardio intensif untuk membakar kalori dan meningkatkan stamina. Kombinasi gerakan aerobik, HIIT, dan latihan interval.</p>
-                <div class="class-footer">
-                  <span class="level-badge intermediate">Level: Menengah</span>
-                  <button class="btn-detail" onclick="goToDetail('cardio-blast')">Detail Kelas</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Yoga Flow Card -->
-            <div class="class-card">
-              <div class="class-image">
-                <img src="/IMG-KELAS/yoga-flow.jpg" alt="Yoga Flow" />
-              </div>
-              <div class="class-content">
-                <h3 class="class-title">Yoga Flow</h3>
-                <div class="class-info">
-                  <p class="instructor">Instruktur: Dewi Putri</p>
-                  <p class="duration">75 menit</p>
-                </div>
-                <p class="class-description">Kelas yoga untuk meningkatkan fleksibilitas, keseimbangan, dan ketenangan pikiran. Fokus pada pernapasan dan gerakan yang mengalir.</p>
-                <div class="class-footer">
-                  <span class="level-badge">Level: Semua Level</span>
-                  <button class="btn-detail" onclick="goToDetail('yoga-flow')">Detail Kelas</button>
-                </div>
-              </div>
-            </div>
+        <section class="payment-status-section">
+          <div id="paymentStatusContent">
+            <!-- Payment status content will be loaded here -->
           </div>
         </section>
       </div>
     </main>
 
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Classes Page -->
+    <main id="classesPage" class="page-content">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <div class="footer-logo">
-              <i class="fas fa-dumbbell"></i>
-              <span>GYM Olahraga</span>
-            </div>
-            <p>Tempat terbaik untuk membangun tubuh ideal dan gaya hidup sehat Anda.</p>
-            <div class="social-links">
-              <a href="https://www.facebook.com/whyeyyz"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://www.instagram.com/whyuueyzz/"><i class="fab fa-instagram"></i></a>
-              <a href="https://github.com/WahyuSatrio505"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-
-          <div class="footer-links">
-            <h3>Link Cepat</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="kelas.html">Kelas</a></li>
-              <li><a href="jadwal.html">Jadwal</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-hours">
-            <h3>Jam Operasional</h3>
-            <ul>
-              <li>Senin - Jumat: 06:00 - 22:00</li>
-              <li>Sabtu: 07:00 - 20:00</li>
-              <li>Minggu: 08:00 - 18:00</li>
-            </ul>
-          </div>
-
-          <div class="footer-contact">
-            <h3>Kontak Kami</h3>
-            <ul>
-              <li><i class="fas fa-map-marker-alt"></i> Susukan, Kec. Ciracas, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta</li>
-              <li><i class="fas fa-phone"></i> +62 882 1472 8116</li>
-              <li><i class="fas fa-envelope"> wahyuuusatriow@gmail.com</i></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; <span id="currentYear"></span> GYM Olahraga APEX. All rights reserved.</p>
-        </div>
+        <section class="classes-hero">
+          <h1 class="page-title">Semua Kelas Fitness</h1>
+          <p class="page-subtitle">Temukan kelas yang sesuai dengan minat dan level fitness Anda</p>
+        </section>
       </div>
-    </footer>
+    </main>
 
     <!-- Detail Modal -->
     <div id="detailModal" class="modal">
@@ -348,14 +327,33 @@
       </div>
     </div>
 
-    <script src="/OnlyJS/detail-kelas.js"></script>
-    <script src="/OnlyJS/Animasi.js"></script>
-    <script src="/OnlyJS/Hamburger-menu.js"></script>
-    <script src="/OnlyJS/Kelas.js"></script>
-    <script src="/OnlyJS/MemberShip.js"></script>
-    <script src="/OnlyJS/kontak.js"></script>
-    <script src="/OnlyJS/script-pembayaran.js"></script>
-    <script src="/OnlyJS/Pembayaran.js"></script>
-    <script src="/OnlyJS/login.js"></script>
+    <!-- Membership Modal -->
+    <div id="membershipModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeMembershipModal()">&times;</span>
+        <div id="membershipModalBody">
+          <!-- Membership form will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal">
+      <div class="modal-content loading-content">
+        <div class="loading-spinner"></div>
+        <h3>Memproses Pembayaran...</h3>
+        <p>Mohon tunggu, jangan tutup halaman ini</p>
+      </div>
+    </div>
+
+    <script src="./OnlyJS/script-pembayaran.js"></script>
+    <script src="./OnlyJS/Pembayaran.js"></script>
+    <script src="./OnlyJS/Animasi.js"></script>
+    <script src="./OnlyJS/Main.js"></script>
+    <script src="./OnlyJS/Hamburger-menu.js"></script>
+    <script src="./OnlyJS/MemberShip.js"></script>
+    <script src="./OnlyJS/detail-kelas.js"></script>
+    <script src="./OnlyJS/daftar-kelas2.js"></script>
+    <script src="./OnlyJS/daftar-kelas.js"></script>
   </body>
 </html>

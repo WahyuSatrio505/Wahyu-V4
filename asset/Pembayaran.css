@@ -50,6 +50,19 @@ body {
 }
 
 /* Navigation Styles */
+
+.payment-icon {
+  width: 40px;
+  height: auto;
+  margin: 0 8px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.payment-icon:hover {
+  transform: scale(1.1);
+}
+
 .navigation {
   flex: 1;
   display: flex;
@@ -126,7 +139,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(52, 73, 94, 0.9)), url("/placeholder.svg?height=500&width=1200");
+  background: #ffffff, transparent;
   background-size: cover;
   background-position: center;
   color: white;
@@ -148,21 +161,45 @@ body {
 }
 
 .btn-cta {
-  background: #e74c3c;
-  color: white;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 14px 32px;
+  color: #fff;
   border: none;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  border-radius: 50px;
+  background: linear-gradient(
+    120deg,
+    #ffa963,
+    #ff4747c8,
+    #530686
+  );
+  background-size: 200%;
+  background-position: 0%;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glowButton 5s linear infinite;
+  text-shadow: 0 0 6px rgba(0, 255, 255, 0.8);
 }
 
-.btn-cta:hover {
-  background: #c0392b;
-  transform: translateY(-3px);
+@keyframes glowButton {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgb(240, 131, 80);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 30px rgb(101, 9, 151);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(255, 221, 0, 0.4);
+  }
 }
+
+
 
 .btn-secondary {
   background: #6c757d;
