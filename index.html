@@ -7,6 +7,9 @@
 
     <!-- Link -->
     <link rel="stylesheet" href="./asset/all.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <meta name="description" content="Pusat kebugaran dan olahraga terbaik untuk membangun tubuh ideal Anda" />
 
@@ -65,7 +68,7 @@
         <h2 class="section-title">Mengapa Memilih Kami?</h2>
 
         <div class="features-grid">
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-dumbbell"></i>
             </div>
@@ -73,7 +76,7 @@
             <p>Dilengkapi dengan peralatan fitness terbaru dan berkualitas tinggi untuk hasil maksimal.</p>
           </div>
 
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-users"></i>
             </div>
@@ -81,7 +84,7 @@
             <p>Tim instruktur berpengalaman dan bersertifikat siap membantu Anda mencapai tujuan.</p>
           </div>
 
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-calendar-alt"></i>
             </div>
@@ -89,7 +92,7 @@
             <p>Berbagai pilihan kelas untuk semua level, dari pemula hingga tingkat lanjut.</p>
           </div>
 
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-clock"></i>
             </div>
@@ -97,7 +100,7 @@
             <p>Buka setiap hari dengan jam operasional yang panjang untuk kenyamanan Anda.</p>
           </div>
 
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-credit-card"></i>
             </div>
@@ -105,7 +108,7 @@
             <p>Berbagai pilihan paket keanggotaan yang dapat disesuaikan dengan kebutuhan Anda.</p>
           </div>
 
-          <div class="feature-card animate-on-scroll">
+          <div class="feature-card animate-on-scroll" data-aos="fade-up" data-aos-duration="3000">
             <div class="feature-icon">
               <i class="fas fa-award"></i>
             </div>
@@ -117,7 +120,7 @@
     </section>
 
     <!-- Classes Preview Section -->
-    <section class="classes-preview">
+    <section class="classes-preview" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
       <div class="container">
         <h2 class="section-title">Kelas Unggulan Kami</h2>
 
@@ -134,7 +137,7 @@
             </div>
           </div>
 
-          <div class="class-card animate-on-scroll">
+          <div class="class-card animate-on-scroll" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div class="class-image">
               <img src="./IMG-KELAS/Cardio.webp" alt="Cardio Blast" />
             </div>
@@ -146,7 +149,7 @@
             </div>
           </div>
 
-          <div class="class-card animate-on-scroll">
+          <div class="class-card animate-on-scroll" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <div class="class-image">
               <img src="./IMG-KELAS/yoga-flow.jpg" alt="Yoga Flow" />
             </div>
@@ -166,7 +169,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section class="testimonials" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
       <div class="container">
         <h2 class="section-title">Apa Kata Member Kami</h2>
 
@@ -225,7 +228,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
       <div class="container">
         <h2>Siap Untuk Memulai Perjalanan Fitness Anda?</h2>
         <p>Bergabunglah dengan komunitas kami dan mulai transformasi tubuh dan pikiran Anda hari ini.</p>
@@ -234,7 +237,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
       <div class="container">
         <div class="footer-content">
           <div class="footer-about">
@@ -291,5 +294,9 @@
     <script src="./_php/olahraga.sql"></script>
     <script src="./_php/login.php"></script>
     <script src="./OnlyJS/Hamburger-menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
