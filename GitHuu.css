@@ -1,0 +1,51 @@
+.github-live-section {
+  background: radial-gradient(ellipse at center, #121236 0%, #000014 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00ffe7;
+  text-shadow: 0 0 15px #00ffe7;
+}
+
+.github-card {
+  background: #1c1c3c;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 25px rgba(0, 255, 247, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #00ffe7;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+a#profileLink {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a#profileLink:hover {
+  text-decoration: underline;
+}
