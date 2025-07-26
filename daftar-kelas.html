@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Kelas - GYM Olahraga</title>
+    <link rel="stylesheet" href="./asset/daftar-kelas.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="./index.html" class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Kembali</span>
+        </a>
+        <h1>Pendaftaran Kelas</h1>
+        <div></div>
+      </div>
+    </header>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Pendaftaran Berhasil!</h2>
+        <p id="successMessage">Anda telah berhasil mendaftar untuk kelas</p>
+        <p class="redirect-text">Anda akan diarahkan kembali ke halaman utama dalam <span id="countdown">3</span> detik...</p>
+      </div>
+    </div>
+
+    <main class="registration-main">
+      <div class="registration-container">
+        <!-- Class Info Card -->
+        <div class="class-info-card">
+          <h3>Detail Kelas</h3>
+          <div class="class-details" id="classDetails">
+            <!-- Class details will be populated by JavaScript -->
+          </div>
+          <div class="important-notes">
+            <h5>Catatan Penting:</h5>
+            <ul>
+              <li>• Datang 15 menit sebelum kelas</li>
+              <li>• Bawa handuk dan botol minum</li>
+              <li>• Gunakan pakaian olahraga yang nyaman</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="registration-form-card">
+          <h2>Form Pendaftaran</h2>
+          <form id="registrationForm" class="registration-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap *</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="contoh@email.com" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="telepon">Nomor Telepon *</label>
+              <input type="tel" id="telepon" name="telepon" required placeholder="08xxxxxxxxxx" />
+            </div>
+
+            <div class="form-group">
+              <label for="pengalaman">Pengalaman Olahraga</label>
+              <select id="pengalaman" name="pengalaman">
+                <option value="">Pilih tingkat pengalaman</option>
+                <option value="pemula">Pemula (0-6 bulan)</option>
+                <option value="menengah">Menengah (6 bulan - 2 tahun)</option>
+                <option value="lanjutan">Lanjutan (2+ tahun)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tujuan">Tujuan Latihan</label>
+              <select id="tujuan" name="tujuan">
+                <option value="">Pilih tujuan latihan</option>
+                <option value="menurunkan-berat">Menurunkan Berat Badan</option>
+                <option value="menambah-massa">Menambah Massa Otot</option>
+                <option value="meningkatkan-kekuatan">Meningkatkan Kekuatan</option>
+                <option value="kesehatan-umum">Kesehatan Umum</option>
+                <option value="rehabilitasi">Rehabilitasi</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="kondisiKesehatan">Kondisi Kesehatan Khusus</label>
+              <textarea id="kondisiKesehatan" name="kondisiKesehatan" rows="3" placeholder="Ceritakan jika ada kondisi kesehatan khusus, cedera, atau pantangan tertentu (opsional)"></textarea>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agreement" required />
+              <label for="agreement"> Saya menyetujui <a href="#" class="terms-link">syarat dan ketentuan</a> yang berlaku * </label>
+            </div>
+
+            <div class="form-buttons">
+              <a href="index.html" class="btn btn-secondary">Batal</a>
+              <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="./JS/daftar-kelas.js"></script>
+    <script src="./JS/daftar-kelas2.js"></script>
+  </body>
+</html>

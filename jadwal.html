@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GYM Olahraga - Strength Training</title>
+    <link rel="stylesheet" href="./asset/daftar-kelas.css" />
+    <link rel="stylesheet" href="./asset/Pembayaran.css">
+    <link rel="stylesheet" href="./asset/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <div class="logo-icon">🏋️</div>
+          <h1>GYM Olahraga</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars" id="menuIcon"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="./index.html" class="menu-item">Beranda</a>
+        <a href="./daftar-kelas.html" class="menu-item">Kelas</a>
+        <a href="./jadwal.html" class="menu-item">Jadwal</a>
+        <a href="./pembayaran-gate.html" class="menu-item">Pembayaran</a>
+        <a href="./contact.html" class="menu-item">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Day Header -->
+      <div class="day-header">
+        <h2>Senin</h2>
+        <p id="classCount">4 kelas tersedia</p>
+      </div>
+
+      <!-- Classes Grid -->
+      <div class="classes-grid" id="classesGrid">
+        <!-- Classes will be populated by JavaScript -->
+      </div>
+
+      <!-- Additional Info -->
+      <div class="info-section">
+        <h3>Informasi Penting</h3>
+        <ul>
+          <li>• Pendaftaran kelas dibuka 24 jam sebelum jadwal</li>
+          <li>• Maksimal pembatalan 2 jam sebelum kelas dimulai</li>
+          <li>• Bawa handuk dan botol minum sendiri</li>
+          <li>• Datang 15 menit sebelum kelas dimulai</li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+          <p class="copyright">&copy; <span id="currentYear"></span> <strong>APEX PERFORMANCE GYM</strong>. All rights reserved.<br /></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./OnlyJS/daftar-kelas2.js"></script>
+    <script src="./OnlyJS/daftar-kelas.js"></script>
+    <script src="./OnlyJS/detail-kelas.js"></script>
+    <script src="./OnlyJS/Animasi.js"></script>
+    <script src="./OnlyJS/Hamburger-menu.js"></script>
+  </body>
+</html>

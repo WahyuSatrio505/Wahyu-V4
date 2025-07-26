@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Daftar - GYM Olahraga</title>
+
+    <!-- link -->
+    <link rel="stylesheet" href="./asset/all.css" />
+    <form action="/Khusus_php/register.php"></form>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta name="description" content="Login atau daftar untuk menjadi anggota GYM Olahraga" />
+    <form action="/Khusus_php/login.php" method="post"></form>
+
+    <!-- atas -->
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-content">
+          <a href="index.html" class="logo">
+            <i class="fas fa-dumbbell"></i>
+            <span>GYM Olahraga</span>
+          </a>
+
+          <div class="nav-menu" id="navMenu">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="kelas.html" class="nav-link">Kelas</a></li>
+              <li><a href="jadwal.html" class="nav-link">Jadwal</a></li>
+              <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login/Register Section -->
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-logo">
+            <i class="fas fa-dumbbell"></i>
+            <span>GYM Olahraga</span>
+          </div>
+
+          <div class="auth-tabs">
+            <div class="auth-tab-header">
+              <div class="auth-tab-item active" data-tab="login">Login</div>
+              <div class="auth-tab-item" data-tab="register">Daftar</div>
+            </div>
+
+            <div class="auth-tab-content">
+              <div class="auth-tab-pane active" id="login">
+                <form id="loginForm" action="php/login.php" method="post">
+                  <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" name="email" placeholder="nama@example.com" required />
+                  </div>
+
+                  <div class="form-group">
+                    <div class="password-label">
+                      <label for="loginPassword">Password</label>
+                      <a href="#" class="forgot-password">Lupa password?</a>
+                    </div>
+                    <input type="password" id="loginPassword" name="password" required />
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+              </div>
+
+              <div class="auth-tab-pane" id="register">
+                <form id="registerForm" action="php/register.php" method="post">
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="firstName">Nama Depan</label>
+                      <input type="text" id="firstName" name="firstName" required />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="lastName">Nama Belakang</label>
+                      <input type="text" id="lastName" name="lastName" required />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="email" placeholder="nama@example.com" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="password" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="confirmPassword">Konfirmasi Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required />
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-block">Daftar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <i class="fas fa-dumbbell"></i>
+              <span>GYM Olahraga</span>
+            </div>
+            <p>Tempat terbaik untuk membangun tubuh ideal dan gaya hidup sehat Anda.</p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h3>Link Cepat</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="kelas.html">Kelas</a></li>
+              <li><a href="jadwal.html">Jadwal</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-hours">
+            <h3>Jam Operasional</h3>
+            <ul>
+              <li>Senin - Jumat: 06:00 - 22:00</li>
+              <li>Sabtu: 07:00 - 20:00</li>
+              <li>Minggu: 08:00 - 18:00</li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Kontak Kami</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> Jl. Fitness No. 123, Jakarta</li>
+              <li><i class="fas fa-phone"></i> +62 123 4567 890</li>
+              <li><i class="fas fa-envelope"></i> info@gymolahraga.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> GYM Olahraga. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script src="./animations.js"></script>
+    <script src="./login.js"></script>
+    <script src="./JS/Hamburger-menu.js"></script>
+
+  </body>
+</html>
