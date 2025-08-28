@@ -1,3 +1,6 @@
+/* fontt nih yaaa */
+@import url("https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap");
+
 /* Base Styles */
 :root {
   --primary-color: #06b6d4; /* Cyan */
@@ -32,6 +35,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -82,6 +86,120 @@ img {
   width: 100%;
   height: 100%;
   background-image: repeating-linear-gradient(to bottom, var(--primary-color), var(--primary-color) 1px, transparent 1px, transparent calc(100% / 12));
+}
+
+/* bagian loadingg */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000; /* background gelap cyberpunk */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  letter-spacing: 1.3rem;
+  transition: opacity 4.8s ease, visibility 4.8s ease; /* biar bisa fade-out */
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.glitch {
+  font-family: "Allan", serrif;
+  font-size: 2rem;
+  color: #00ffbf; /* neon cyan */
+  position: relative;
+  text-transform: uppercase;
+  animation: flicker 0.5s infinite;
+}
+
+/* Efek glitch */
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #001eff; /* pink neon */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  color: #00ffff; /* cyan neon */
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  20% {
+    clip: rect(0, 9999px, 10px, 0);
+    transform: translate(-5px, -5px);
+  }
+  40% {
+    clip: rect(0, 9999px, 5px, 0);
+    transform: translate(5px, 5px);
+  }
+  60% {
+    clip: rect(0, 9999px, 15px, 0);
+    transform: translate(-3px, 3px);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  20% {
+    clip: rect(10px, 9999px, 20px, 0);
+    transform: translate(5px, 5px);
+  }
+  40% {
+    clip: rect(5px, 9999px, 15px, 0);
+    transform: translate(-5px, -5px);
+  }
+  60% {
+    clip: rect(15px, 9999px, 25px, 0);
+    transform: translate(3px, -3px);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+  }
 }
 
 /* Typography */
@@ -198,7 +316,7 @@ header .container {
 .logo {
   font-size: 26px;
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif; /* biar lebih cyberpunk */
+  font-family: "Orbitron", sans-serif; /* biar lebih cyberpunk */
   color: #edcbc8;
   text-transform: uppercase;
   animation: floatSpin 6s ease-in-out infinite, glowPulse 5s infinite;
@@ -206,11 +324,7 @@ header .container {
   letter-spacing: 2px;
   z-index: 1;
   mix-blend-mode: screen;
-  text-shadow:
-    0 0 2px #0ff,
-    0 0 4px #0ff,
-    0 0 6px rgb(169, 255, 164),
-    0 0 10px #00e0ff;
+  text-shadow: 0 0 2px #0ff, 0 0 4px #0ff, 0 0 6px rgb(169, 255, 164), 0 0 10px #00e0ff;
 }
 
 .logo span {
@@ -222,37 +336,49 @@ header .container {
 
 /* Gerak pelan2 + spin */
 @keyframes floatSpin {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-5px) rotate(1deg); }
-  100% { transform: translateY(0) rotate(0deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
 /* Glowing effect */
 @keyframes glowPulse {
-  0%, 100% {
-    text-shadow:
-      0 0 5px #0ff,
-      0 0 10px #0ff,
-      0 0 20px #0ff;
+  0%,
+  100% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
   }
   50% {
-    text-shadow:
-      0 0 10px #0ff,
-      0 0 30px #00e0ff,
-      0 0 50px #00e0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 30px #00e0ff, 0 0 50px #00e0ff;
   }
 }
 
 /* Efek glitch untuk span */
 @keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-1px, 1px); }
-  40% { transform: translate(1px, -1px); }
-  60% { transform: translate(-1px, -1px); }
-  80% { transform: translate(1px, 1px); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, -1px);
+  }
+  80% {
+    transform: translate(1px, 1px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
-
 
 .desktop-nav ul {
   display: flex;
@@ -1117,7 +1243,7 @@ section:nth-child(even) {
 
 .section-header {
   text-align: center;
-  margin-bottom: 60px;;
+  margin-bottom: 60px;
 }
 
 .section-title2 {

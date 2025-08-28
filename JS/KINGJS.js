@@ -196,3 +196,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Call updateActiveNavLink on page load
   updateActiveNavLink();
 });
+
+// Tunggu sampai semua konten selesai ke-load
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+  preloader.classList.add("hidden");
+  setTimeout(() => {
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }, 2900); // tunggu animasi fade-out selesai
+});
