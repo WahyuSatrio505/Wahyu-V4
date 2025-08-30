@@ -1001,6 +1001,38 @@ section:nth-child(even) {
   box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
 }
 
+/* text atas berubah warna TI */
+.typing-text {
+  font-weight: bold;
+  display: inline-block;
+  border-right: 2px solid #f31111; /* efek cursor */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animasi ganti warna */
+@keyframes colorChange {
+  0% {
+    color: #47ffc5;
+  }
+  25% {
+    color: #1e90ff;
+  }
+  50% {
+    color: #2ed573;
+  }
+  75% {
+    color: #ffa502;
+  }
+  100% {
+    color: #bb47ff;
+  }
+}
+
+.typing-text {
+  animation: colorChange 8s infinite linear;
+}
+
 .about-text-container {
   display: flex;
   flex-direction: column;

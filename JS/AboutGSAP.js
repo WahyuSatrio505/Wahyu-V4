@@ -218,3 +218,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const text = "Mahasiswa Aktif   (Computer Science)";
+const typingElement = document.getElementById("typing");
+
+let i = 0;
+function typeWriter() {
+  if (i < text.length) {
+    typingElement.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 250); // kecepatan ngetik
+  }
+}
+
+window.onload = typeWriter;

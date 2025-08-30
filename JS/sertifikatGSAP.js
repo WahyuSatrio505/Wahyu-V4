@@ -1,41 +1,35 @@
 // certificates.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Register GSAP ScrollTrigger
   gsap.registerPlugin(ScrollTrigger);
-  
+
   // Get references to elements
-  const sectionRef = document.getElementById('certificates');
-  const titleRef = document.getElementById('cert-title');
-  const cardsRef = document.getElementById('cert-cards');
-  const cards = document.querySelectorAll('.certificate-card');
-  
+  const sectionRef = document.getElementById("certificates");
+  const titleRef = document.getElementById("cert-title");
+  const cardsRef = document.getElementById("cert-cards");
+  const cards = document.querySelectorAll(".certificate-card");
+
   // Title animation with glitch effect
   const titleAnimation = gsap.timeline({
     scrollTrigger: {
       trigger: titleRef,
       start: "top 80%",
-      toggleActions: "play none none none"
-    }
+      toggleActions: "play none none none",
+    },
   });
-  
-  titleAnimation
-    .fromTo(
-      titleRef,
-      { opacity: 0, y: -50, filter: "blur(10px)" },
-      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1, ease: "power3.out" }
-    )
-    .to(
-      titleRef,
-      {
-        textShadow: "0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2",
-        color: "#fff",
-        duration: 0.3,
-        repeat: 1,
-        yoyo: true
-      },
-      "-=0.2"
-    );
-  
+
+  titleAnimation.fromTo(titleRef, { opacity: 0, y: -50, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 3, ease: "power3.out" }).to(
+    titleRef,
+    {
+      textShadow: "0 0 10px #E2682BFF, 0 0 20px #E22B56FF, 0 0 30px #2BE22EFF",
+      color: "#fff",
+      duration: 0.3,
+      repeat: 1,
+      yoyo: true,
+    },
+    "-=0.2"
+  );
+
   // Cards animation
   // Initial animation when scrolling to the section
   gsap.fromTo(
@@ -44,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       opacity: 0,
       y: 100,
       rotationY: 15,
-      scale: 0.8
+      scale: 0.8,
     },
     {
       opacity: 1,
@@ -56,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
       ease: "power3.out",
       scrollTrigger: {
         trigger: cardsRef,
-        start: "top 75%"
-      }
+        start: "top 75%",
+      },
     }
   );
-  
+
   // Floating animation that runs continuously
   gsap.to(cards, {
     y: "10px",
@@ -68,64 +62,64 @@ document.addEventListener('DOMContentLoaded', function() {
     ease: "sine.inOut",
     stagger: 0.2,
     repeat: -1,
-    yoyo: true
+    yoyo: true,
   });
-  
+
   // Add hover effects for each card
-  cards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
       gsap.to(card, {
         scale: 1.05,
         boxShadow: "0 20px 40px rgba(138, 43, 226, 0.4)",
         borderColor: "rgba(138, 43, 226, 0.6)",
         duration: 0.4,
-        ease: "power2.out"
+        ease: "power2.out",
       });
-      
+
       // Glow effect on hover
-      gsap.to(card.querySelector('.certificate-glow'), {
+      gsap.to(card.querySelector(".certificate-glow"), {
         opacity: 1,
-        duration: 0.4
+        duration: 0.4,
       });
-      
+
       // Show overlay with button
-      gsap.to(card.querySelector('.certificate-overlay'), {
+      gsap.to(card.querySelector(".certificate-overlay"), {
         opacity: 1,
-        duration: 0.3
+        duration: 0.3,
       });
-      
+
       // Zoom image slightly
-      gsap.to(card.querySelector('.certificate-img'), {
+      gsap.to(card.querySelector(".certificate-img"), {
         scale: 1.1,
-        duration: 0.5
+        duration: 0.5,
       });
     });
-    
-    card.addEventListener('mouseleave', () => {
+
+    card.addEventListener("mouseleave", () => {
       gsap.to(card, {
         scale: 1,
         boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)",
         borderColor: "rgba(255, 255, 255, 0.1)",
         duration: 0.4,
-        ease: "power2.out"
+        ease: "power2.out",
       });
-      
+
       // Remove glow effect
-      gsap.to(card.querySelector('.certificate-glow'), {
+      gsap.to(card.querySelector(".certificate-glow"), {
         opacity: 0,
-        duration: 0.4
+        duration: 0.4,
       });
-      
+
       // Hide overlay
-      gsap.to(card.querySelector('.certificate-overlay'), {
+      gsap.to(card.querySelector(".certificate-overlay"), {
         opacity: 0,
-        duration: 0.3
+        duration: 0.3,
       });
-      
+
       // Reset image zoom
-      gsap.to(card.querySelector('.certificate-img'), {
+      gsap.to(card.querySelector(".certificate-img"), {
         scale: 1,
-        duration: 0.5
+        duration: 2.5,
       });
     });
   });
