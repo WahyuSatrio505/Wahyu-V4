@@ -1,5 +1,7 @@
 /* fontt nih yaaa */
 @import url("https://fonts.googleapis.com/css2?family=Allan:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* end fonttt */
 
 /* Base Styles */
 :root {
@@ -674,6 +676,29 @@ section:nth-child(even) {
 
 .home-text {
   flex: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem; /* biar lebih keliatan */
+  font-weight: bold;
+  animation: neon 9s infinite linear;
+}
+
+/* animasi warna */
+@keyframes neon {
+  0% {
+    color: #feae3ebb;
+  } /* merah */
+  25% {
+    color: #00ff00;
+  } /* hijau */
+  50% {
+    color: #0091ff;
+  } /* biru */
+  75% {
+    color: #ff00ff;
+  } /* ungu */
+  100% {
+    color: #00ffc8;
+  } /* balik lagi merah */
 }
 
 .welcome-badge {
