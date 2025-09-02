@@ -227,7 +227,7 @@ function typeWriter() {
   if (i < text.length) {
     typingElement.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeWriter, 250); // kecepatan ngetik
+    setTimeout(typeWriter, 350); // kecepatan ngetik
   }
 }
 
