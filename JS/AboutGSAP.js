@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const text = "Mahasiswa Aktif   (Computer Science)";
+const text = "Mahasiswa Aktif   (Informatics)";
 const typingElement = document.getElementById("typing");
 
 let i = 0;
@@ -227,7 +227,7 @@ function typeWriter() {
   if (i < text.length) {
     typingElement.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeWriter, 550); // kecepatan ngetik
+    setTimeout(typeWriter, 450); // kecepatan ngetik
   }
 }
 
