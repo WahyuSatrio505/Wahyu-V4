@@ -1379,7 +1379,7 @@ section:nth-child(even) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #8a2be2, #00b4d8);
+  background: linear-gradient(135deg, #9c319c, #00b4d8);
   border-radius: 12px;
   margin-right: 15px;
   box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
