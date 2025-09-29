@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Cyberpunk Portfolio</title>
     <link rel="stylesheet" href="./blogs.css">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./chatbot.css">
     <!-- End GSAP -->
     <!-- Tambahkan ini di bagian head atau sebelum tag penutup body -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
@@ -91,14 +92,14 @@
         </ul>
       </div>
     </header>
-    <!-- End Nav -->
+    <!-- End Nav --> 
 
     <!-- Home Section -->
     <section id="home" class="home-section">
       <div class="container">
         <div class="home-content">
           <div class="home-text">
-            <div class="welcome-badge">Fans Ronaldo Garis Keras 🤩😏</div>
+            <div class="welcome-badge">Full Stack Web Developer 💡</div>
             <h1>Hai, Nama Saya <span class="gradient-text">Wahyu</span></h1>
             <p>Saya Adalah Pengembang Dari Sebuah Website, dan Tertarik sekali dalam bidang Front-End maupun juga Back-End 😎🚀</p>
             <div class="home-buttons">
@@ -121,6 +122,22 @@
     </section>
     <!-- Ahkir Home -->
 
+    <!-- untuk ai chat bot -->
+<!-- Chatbot Button and Box -->
+<button id="chatbot-toggle" class="chatbot-button">🤖</button>
+<div id="chatbot-box" class="chatbot-container">
+  <div class="chatbot-header">
+    <span>Chat dengan Aal</span>
+    <button id="chatbot-close">X</button>
+  </div>
+  <div id="chatbot-messages" class="chatbot-messages"></div>
+  <form id="chatbot-form" class="chatbot-form">
+    <input type="text" id="chatbot-input" placeholder="Tanya apa aja...">
+    <button type="submit">Kirim</button>
+  </form>
+</div>
+    <!-- end chat bot -->
+    
     <!-- About Section -->
     <section id="about" class="section">
       <div class="container">
@@ -1039,6 +1056,7 @@
 
     <!-- Js -->
     <script src="./JS/KINGJS.js"></script>
+    <script src="./JS/chatbot.js"></script>
     <script src="./JS/blogs.js"></script>
     <script src="./JS/GSAPSKILLS.js"></script>
     <script src="./JS/AboutGSAP.js"></script>
