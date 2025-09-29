@@ -6,6 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("chatbot-input");
   const messages = document.getElementById("chatbot-messages");
 
+  let websiteData; // Simpan data JSON di sini
+
+  // Load data dari website_data.json saat halaman dimuat
+  fetch("https://wahyusatrio505.github.io/Wahyu-V4/website_data.json") // Ganti URL asli setelah deploy
+    .then((response) => response.json())
+    .then((data) => {
+      websiteData = data;
+      console.log("Data JSON dimuat:", websiteData); // Cek di console
+    })
+    .catch((error) => console.error("Error memuat data JSON:", error));
+
   toggleBtn.addEventListener("click", () => {
     chatBox.classList.toggle("active");
   });
@@ -14,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
     chatBox.classList.remove("active");
   });
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     const question = input.value.trim();
-    if (!question) return;
+    if (!question || !websiteData) return;
 
     // Tampilkan pesan user
     const userMsg = document.createElement("div");
@@ -27,23 +38,33 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.scrollTop = messages.scrollHeight;
     input.value = "";
 
-    // Kirim ke API
-    try {
-      const response = await fetch("http://localhost:5000/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question }),
-      });
-      const data = await response.json();
+    // Logika jawaban berdasarkan konten JSON
+    let answer = "Maaf, aku Aal gak nemu info itu. Coba tanya lagi!";
+    const lowerQuestion = question.toLowerCase();
 
-      // Tampilkan jawaban bot
-      const botMsg = document.createElement("div");
-      botMsg.classList.add("message", "bot");
-      botMsg.textContent = data.answer;
-      messages.appendChild(botMsg);
-      messages.scrollTop = messages.scrollHeight;
-    } catch (error) {
-      console.error("Error:", error);
+    if (lowerQuestion.includes("home") || lowerQuestion.includes("siapa wahyu")) {
+      answer = websiteData.home.content;
+    } else if (lowerQuestion.includes("about") || lowerQuestion.includes("tentang")) {
+      answer = websiteData.about.content;
+    } else if (lowerQuestion.includes("skill")) {
+      answer = websiteData.skills.content;
+    } else if (lowerQuestion.includes("project")) {
+      answer = websiteData.projects.content;
+    } else if (lowerQuestion.includes("certificate")) {
+      answer = websiteData.certificates.content;
+    } else if (lowerQuestion.includes("blog")) {
+      answer = websiteData.blogs.content;
+    } else if (lowerQuestion.includes("learning")) {
+      answer = websiteData.learning.content;
+    } else if (lowerQuestion.includes("contact")) {
+      answer = websiteData.contact.content;
     }
+
+    // Tampilkan jawaban bot
+    const botMsg = document.createElement("div");
+    botMsg.classList.add("message", "bot");
+    botMsg.textContent = answer;
+    messages.appendChild(botMsg);
+    messages.scrollTop = messages.scrollHeight;
   });
 });
