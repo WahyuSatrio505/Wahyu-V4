@@ -127,6 +127,14 @@
   color: #222;
   margin-right: auto;
 }
+/* animasi chatbot */
+.chatbot-box {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.chatbot-box.active {
+  transform: translateY(0);
+}
 
 /* Input */
 .chatbot-form {
