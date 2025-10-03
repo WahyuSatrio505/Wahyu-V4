@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         chatBox.classList.add("active");
         const welcomeMsg = document.createElement("div");
         welcomeMsg.classList.add("message", "bot");
-        welcomeMsg.textContent = "Haii Aku Aal, chatbot buatan Wahyu. Tanya aku apa saja berdasarkan yang ada di website ini 😎🚀";
+        welcomeMsg.textContent = "Haii Aku Aal, chat-bot buatan Wahyu. Tanya aku apa saja  yang ada di website ini,seperti tentang,project,dan sertifikasi 😎🚀";
         messages.appendChild(welcomeMsg);
         messages.scrollTop = messages.scrollHeight;
       }, 500); // Delay 0.5 detik sebelum muncul

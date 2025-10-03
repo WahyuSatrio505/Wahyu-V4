@@ -277,7 +277,7 @@ body {
   top: 15px;
   right: -35px;
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-  color: rgb(0, 252, 42);
+  color: rgb(241, 241, 241);
   font-size: 0.7rem;
   font-weight: bold;
   padding: 5px 30px;

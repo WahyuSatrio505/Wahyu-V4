@@ -61,8 +61,8 @@
   display: inline-block;
   padding: 10px 16px;
   border-radius: 8px;
-  background: #c780238a;
-  color: rgb(227, 227, 227);
+  background: #251c0f8a,transparent;
+  color: rgba(255, 251, 251, 0.462);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-decoration: none;
   transition: background 0.3s;

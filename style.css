@@ -1510,32 +1510,7 @@ section:nth-child(even) {
 }
 
 /* Skill Radar Chart */
-.skills-radar {
-  background: rgba(26, 26, 46, 0.7);
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  margin-bottom: 60px;
-  text-align: center;
-  opacity: 0;
-  transform: scale(0.9);
-}
 
-.skills-radar h3 {
-  font-family: "Rajdhani", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 30px;
-}
-
-.radar-container {
-  width: 100%;
-  max-width: 500px;
-  height: 400px;
-  margin: 0 auto;
-}
 
 /* Skill Cards */
 .skills-cards {
@@ -1545,11 +1520,11 @@ section:nth-child(even) {
 }
 
 .skill-card {
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(8, 8, 123, 0.7);
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(242, 72, 10, 0.351);
+  border: 1px solid rgb(255, 255, 255);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
