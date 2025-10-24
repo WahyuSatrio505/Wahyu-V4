@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const text = "Mahasiswa Aktif   (Informatics)";
+const text = "Mahasiswa Aktif   (Teknik Informatika) ";
 const typingElement = document.getElementById("typing");
 
 let i = 0;

@@ -2,7 +2,7 @@
 /**
  * GYM Olahraga - Contact Form Handler
  * Author: v0
- * Version: 1.0
+ * Version: 1.0 
  */
 
 // Include database configuration
