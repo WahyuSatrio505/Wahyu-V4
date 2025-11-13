@@ -2,7 +2,7 @@ name: Auto Commit Every 24 Hours
 
 on:
   schedule:
-    - cron: '0 0 * * *' # jalan setiap jam 00:00 UTC (bisa ubah sesuai waktu)
+    - cron: '0 0 * * *' 
   workflow_dispatch:
 
 jobs:
@@ -12,12 +12,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update timestamp
         run: |
           date > last_updated.txt
-          git config --global user.name "wahyusatrio505"
-          git config --global user.email "youremail@example.com"
+          git config --global user.name "WahyuSatrio505"
+          git config --global user.email "yourrealemail@example.com"
           git add last_updated.txt
-          git commit -m "Auto commit: $(date)"
+          git commit -m "Auto commit: $(date)" || echo "No changes to commit"
           git push
