@@ -1,0 +1,23 @@
+name: Auto Commit Every 24 Hours
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # jalan setiap jam 00:00 UTC (bisa ubah sesuai waktu)
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Update timestamp
+        run: |
+          date > last_updated.txt
+          git config --global user.name "wahyusatrio505"
+          git config --global user.email "youremail@example.com"
+          git add last_updated.txt
+          git commit -m "Auto commit: $(date)"
+          git push
